@@ -33,41 +33,6 @@ export const Overview: React.FC = () => {
     }
   };
 
-  const handleDownloadStrategy = () => {
-    try {
-      addNotification("Preparing Intelligence Report...");
-      const doc = new jsPDF();
-      
-      doc.setFontSize(22);
-      doc.setTextColor(86, 194, 165);
-      doc.text("LIQUID STRATEGY REPORT", 20, 20);
-      
-      doc.setFontSize(10);
-      doc.setTextColor(100);
-      doc.text(`Generated for: ${profile.name}`, 20, 30);
-      doc.text(`Date: ${new Date().toLocaleDateString()}`, 20, 35);
-
-      autoTable(doc, {
-        startY: 45,
-        head: [['Strategic Node', 'Attribution']],
-        body: [
-          ['Savings Optimization', 'Active - 56.2%'],
-          ['Liquidity Index', '0.84 (Stable)'],
-          ['Wealth Forecast', 'Growth trend detected'],
-          ['Market Exposure', 'Low - Diversified']
-        ],
-        theme: 'striped',
-        headStyles: { fillColor: [86, 194, 165] }
-      });
-
-      doc.save(`Liquid_Strategy_${profile.name.replace(/\s+/g, '_')}.pdf`);
-      addNotification("Strategy Report Downloaded Successfully");
-    } catch (error) {
-      console.error(error);
-      addNotification("PDF Engine failed to initialize.");
-    }
-  };
-
   const handleDownloadFinancialReport = () => {
     try {
       addNotification("Generating Personal Audit...");
