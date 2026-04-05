@@ -1,0 +1,352 @@
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  grid-column: span 3;
+  margin-bottom: 8px;
+}
+
+.mainTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 4px;
+}
+
+.mainSubtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.summaryCard {
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.summaryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.cardTitle {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cardValue {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text-main);
+}
+
+.trendBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.trendBadge.positive {
+  background-color: var(--color-accent-mint-light);
+  color: var(--color-accent-mint);
+}
+
+.trendBadge.negative {
+  background-color: var(--color-accent-red-light);
+  color: var(--color-accent-red);
+}
+
+.mainChartCard {
+  grid-column: span 2;
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.cardHeading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.cardSubheading {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.timeFilters {
+  display: flex;
+  gap: 8px;
+  background-color: var(--color-bg-body);
+  padding: 4px;
+  border-radius: var(--radius-full);
+}
+
+.timeFilterBtn {
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.timeFilterBtn.active {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+:global(.dark) .timeFilterBtn.active {
+  color: #0b0f19;
+}
+
+.donutCard {
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.legendList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.legendItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.legendLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.recentCard {
+  grid-column: span 3;
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.recentList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.txItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.txLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.txIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+.txDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.txName {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.txMeta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.txRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.txAmount {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.txStatus {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent-mint);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Analytics Specifics */
+.insightList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.insightItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-body);
+  transition: all 0.2s;
+}
+
+.insightItem:hover {
+  transform: translateX(4px);
+  background-color: var(--color-border-subtle);
+}
+
+.insightIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--color-accent-mint-light);
+  color: var(--color-accent-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.insightText strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.insightText p {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.insightBtn {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-dark);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+}
+
+:global(.dark) .insightBtn {
+  background-color: var(--color-accent-mint);
+  color: #0b1019;
+}
+
+.insightBtn:hover {
+  opacity: 0.9;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .overviewGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mainChartCard {
+    grid-column: span 2;
+  }
+  .recentCard {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .overviewGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .pageHeader {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .mainChartCard {
+    width: 100%;
+  }
+  .recentCard {
+    width: 100%;
+  }
+  .txLeft {
+    gap: 8px;
+  }
+  .txIcon {
+    width: 36px;
+    height: 36px;
+  }
+  .cardValue {
+    font-size: 1.5rem;
+  }
+}

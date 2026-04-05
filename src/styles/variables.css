@@ -1,0 +1,65 @@
+:root {
+  /* Colors - Light Theme */
+  --color-bg-body: #eff3f8;
+  --color-bg-gradient: radial-gradient(circle at 0% 0%, rgba(86, 194, 165, 0.15) 0%, transparent 40%),
+                       radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.1) 0%, transparent 40%),
+                       #eff3f8;
+  --color-bg-sidebar: rgba(248, 250, 252, 0.85);
+  --color-bg-card: rgba(255, 255, 255, 0.7);
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  
+  --color-primary-dark: #121826;
+  --color-primary-soft: #273142;
+  
+  --color-accent-mint: #56c2a5;
+  --color-accent-mint-light: #e0f6f0;
+  
+  --color-accent-red: #ef4444;
+  --color-accent-red-light: #fee2e2;
+
+  --color-border: rgba(255, 255, 255, 0.4);
+  --color-border-subtle: rgba(255, 255, 255, 0.2);
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Borders, Shadows & Glass UI */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+  --glass-blur: blur(20px);
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 40px rgba(86, 194, 165, 0.1);
+  --shadow-hover: 0 20px 50px -12px rgba(0, 0, 0, 0.12);
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+}
+
+.dark {
+  --color-bg-body: #0b0f19;
+  --color-bg-gradient: radial-gradient(circle at 0% 0%, rgba(86, 194, 165, 0.15) 0%, transparent 40%),
+                       radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.15) 0%, transparent 40%),
+                       #0b0f19;
+  --color-bg-sidebar: rgba(17, 24, 39, 0.7);
+  --color-bg-card: rgba(30, 41, 59, 0.6);
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-subtle: rgba(255, 255, 255, 0.02);
+  --glass-bg: rgba(30, 41, 59, 0.5);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --shadow-soft: 0 10px 40px -10px rgba(255, 255, 255, 0.12), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+  --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.08);
+  --shadow-hover: 0 20px 50px -12px rgba(255, 255, 255, 0.18), 0 0 15px 1px rgba(255, 255, 255, 0.1);
+  
+  /* Make primary dark remain dark in dark mode to fix text contrast, or a deep slate */
+  --color-primary-dark: #1e293b;
+  --color-primary-soft: #334155;
+}
